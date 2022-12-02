@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import Reveal from "./Reveal";
 
 function MyComponent() {
   const [error, setError] = useState(null);
@@ -28,11 +29,9 @@ function MyComponent() {
     return (
       <ul>
         {items.jokes.map(jokes => (
-          <li key={jokes.id}>
+          <li key={jokes.id} joke={items.jokes}>
             <h3>{jokes.type}</h3>
-            <p className="part">{jokes.joke}{jokes.setup}</p>
-            <p className="twopart">{jokes.delivery}</p>
-            
+            {Reveal}
           </li>
         ))}
       </ul>

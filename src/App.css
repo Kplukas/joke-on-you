@@ -19,6 +19,8 @@ ul {
   width: 70%;
   border: 1px solid white;
   list-style-type: none;
+  align-content: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -29,6 +31,10 @@ li {
   margin: 2px;
 }
 .twopart{
-  display: none;
+  font-size: 0px;
+  background-color: aqua;
+  transition:all 0.5s;
 }
-
+.twopart:hover{
+  font-size: 20px;
+}
