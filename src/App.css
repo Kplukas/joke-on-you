@@ -12,3 +12,23 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  border: 1px solid white;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+  width: calc(100% / 2  - 10px);
+  background-color: gray;
+  margin: 2px;
+}
+.twopart{
+  display: none;
+}
+
