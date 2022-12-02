@@ -23,18 +23,45 @@ ul {
   justify-content: center;
   margin: 0;
   padding: 0;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  border-radius: 5px;
+  padding: 20px;
 }
-li {
+.holder {
   list-style-type: none;
-  width: calc(100% / 2  - 10px);
+  width: calc(100% / 2  - 20px);
   background-color: gray;
+  padding: 5px;
   margin: 2px;
+  border-radius: 5px;
 }
-.twopart{
-  font-size: 0px;
-  background-color: aqua;
-  transition:all 0.5s;
+.type {
+  margin-left: 5px;
+  text-align: left;
+  text-decoration: underline;
+  text-transform: capitalize;
 }
-.twopart:hover{
+.joke {
   font-size: 20px;
+  font-weight: bold;
+  background-color: #282c34;
+  border-radius: 5px;
 }
+.delivery {
+  color: gray;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+.holder:hover > .delivery {
+  color: white;
+  background-color: #282c34;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 25px;
+}
+.header {
+  text-transform: uppercase;
+  text-align: center;
+}
+

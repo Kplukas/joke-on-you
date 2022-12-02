@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import Reveal from "./Reveal";
 
 function MyComponent() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
-
+  
   useEffect(() => {
     fetch("https://v2.jokeapi.dev/joke/Programming?amount=10")
       .then(res => res.json())
@@ -29,9 +28,11 @@ function MyComponent() {
     return (
       <ul>
         {items.jokes.map(jokes => (
-          <li key={jokes.id} joke={items.jokes}>
-            <h3>{jokes.type}</h3>
-            {Reveal}
+          <li key={jokes.id} className="holder">
+            <h3 className="type">{jokes.type}</h3>
+            <p className="joke">{jokes.joke}</p>
+            <p className="joke">{jokes.setup}</p>
+            <p className="delivery">{jokes.delivery}</p>
           </li>
         ))}
       </ul>
